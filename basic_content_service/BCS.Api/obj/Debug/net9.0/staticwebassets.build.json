@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "rNMiyiBXUX18qY7DlXXAwaiav72trcoZW4pMTg6XBF0=",
+  "Source": "BCS.Api",
+  "BasePath": "_content/BCS.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
