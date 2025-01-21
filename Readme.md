@@ -77,5 +77,8 @@ use prompts to resolve dependencies
 Most of them are missing references, and the generated code iis so so.
 https://x.com/i/grok/share/QOhO2d3AWaYOgBMya923MnIYj
 
+Grok: Add in the ability to save, read, update and delete to the wpf application
+
+https://x.com/i/grok/share/vY4NNweYVgvCS4OL7FnpuHP5q
 
 https://x.com/i/grok?conversation=1877845767018430752
