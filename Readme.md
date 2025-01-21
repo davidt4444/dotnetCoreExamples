@@ -64,3 +64,18 @@ delete the bin and the obj folder
 dotnet build
 dotnet run
 Solution should validate
+
+dotnet new wpf --name BCE.Native
+#note the wpf template doesn't exist for the mac so for that...
+#Grok:generate all the files needed for a basic wpf application
+#it is the MyWpfApp in the base dir
+dotnet sln add ./BCE.Native/BCE.Native.csproj
+Grok 
+Generate code needed to create a blog post editor from the wpf application template that uses the blog post service
+
+use prompts to resolve dependencies
+Most of them are missing references, and the generated code iis so so.
+https://x.com/i/grok/share/QOhO2d3AWaYOgBMya923MnIYj
+
+
+https://x.com/i/grok?conversation=1877845767018430752
