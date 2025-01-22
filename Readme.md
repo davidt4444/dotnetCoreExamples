@@ -78,7 +78,22 @@ Most of them are missing references, and the generated code iis so so.
 https://x.com/i/grok/share/QOhO2d3AWaYOgBMya923MnIYj
 
 Grok: Add in the ability to save, read, update and delete to the wpf application
+dotnet build
+dotnet run
+Solution should validate
 
 https://x.com/i/grok/share/vY4NNweYVgvCS4OL7FnpuHP5q
+
+dotnet new mvc --name BCE.MVC
+dotnet sln add ./BCE.MVC/BCE.MVC.csproj
+Grok:
+Generate the files required to do the same thing in a mcv app
+generate the create and edit views to satisfy the following model
+https://x.com/i/grok/share/nkKnLEm3sDvMCIcDrAKju1zzO
+I added in redirects to posts in the Home controller and a navigate button to the navigator in the _Layout.cshtml in the shared view
+Also using BCE.MVC.Global.StaticVariables for the connection_string to always be set despite what the relative path may be.
+dotnet build
+dotnet run
+Solution should validate
 
 https://x.com/i/grok?conversation=1877845767018430752

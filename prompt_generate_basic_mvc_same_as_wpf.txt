@@ -1,0 +1,291 @@
+Generate the files required to do the same thing in a mcv app
+To implement similar CRUD functionality in an MVC (Model-View-Controller) application, we'll need the following files:
+
+Models
+Post.cs
+csharp
+using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace YourMvcApp.Models
+{
+    public class Post
+    {
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        [StringLength(200)]
+        public string Title { get; set; }
+
+        [Required]
+        public string Content { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public DateTime? UpdatedAt { get; set; }
+    }
+}
+
+Controllers
+PostsController.cs
+csharp
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using YourMvcApp.Models;
+using YourMvcApp.Services;
+
+namespace YourMvcApp.Controllers
+{
+    public class PostsController : Controller
+    {
+        private readonly IPostService _postService;
+
+        public PostsController(IPostService postService)
+        {
+            _postService = postService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var posts = await _postService.GetAllPostsAsync();
+            return View(posts);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create(Post post)
+        {
+            if (ModelState.IsValid)
+            {
+                await _postService.AddPostAsync(post);
+                return RedirectToAction(nameof(Index));
+            }
+            return View(post);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var post = await _postService.GetPostByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return View(post);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(int id, Post post)
+        {
+            if (id != post.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _postService.UpdatePostAsync(post);
+                    return RedirectToAction(nameof(Index));
+                }
+                catch
+                {
+                    ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists, see your system administrator.");
+                }
+            }
+            return View(post);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var post = await _postService.GetPostByIdAsync(id);
+            if (post == null)
+            {
+                return NotFound();
+            }
+            return View(post);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            await _postService.DeletePostAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
+    }
+}
+
+Views
+Index.cshtml (in Views/Posts/)
+html
+@model IEnumerable<YourMvcApp.Models.Post>
+
+<h2>Posts</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Content)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Content)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+Create.cshtml (in Views/Posts/)
+html
+@model YourMvcApp.Models.Post
+
+<h4>Create Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+Edit.cshtml (in Views/Posts/)
+html
+@model YourMvcApp.Models.Post
+
+<h4>Edit Post</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <input type="hidden" asp-for="Id" />
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Content" class="control-label"></label>
+                <textarea asp-for="Content" class="form-control"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+Delete.cshtml (in Views/Posts/)
+html
+@model YourMvcApp.Models.Post
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Content)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Content)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
+
+Services
+You would need to ensure IPostService and its implementation (PostService from earlier) are included in your project's service collection in Startup.cs or Program.cs.
+
+Startup.cs or Program.cs (for .NET 6+)
+csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllersWithViews();
+    services.AddDbContext<YourDbContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+    services.AddScoped<IPostService, PostService>();
+}
+
+This setup provides a basic CRUD application for managing blog posts in an MVC application. Remember to adjust namespaces and ensure all necessary dependencies are installed via NuGet, like Entity Framework Core for database operations.
