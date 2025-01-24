@@ -96,4 +96,38 @@ dotnet build
 dotnet run
 Solution should validate
 
+Finally, lets make an angular app that uses the web api
+Grok:Generate an angular app that performs the crud operations using the web api service
+
+npm install -g @angular/cli
+ng new angular-crud-app
+cd angular-crud-app
+
+ng generate component post-list
+ng generate component post-create
+ng generate component post-edit
+
+ng generate service post
+
+Additional grok prompts for dealing with the routes
+generate the logic for versions of angular that use app.route.ts instead of app-routing.module.ts
+What do you do if you don't have an app.module.ts file?
+
+The gist is to move the routes into the main.ts bootstrap 
+You don't have an app module anymore in newer versions,
+Also, add in support for httpclient and add in 
+import { provideHttpClient } from '@angular/common/http';
+and to the providers
+    provideHttpClient(), 
+on main.ts
+So, the app.config and app.routes are effectively useless. 
+
+To get the web api endpoint to work for this you will need to add cors middleware policy as a service, and call use cors on the app before app.run(); 
+
+Grok: generate post create and edit component html for this model
+
+Start the web api service
+ng serve
+https://x.com/i/grok/share/fhMQW0jpr1zlHjODG2ELPkPYD
+
 https://x.com/i/grok?conversation=1877845767018430752

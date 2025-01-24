@@ -1,0 +1,86 @@
+generate post create and edit component html for this model export interface Post {
+    id: number;
+    title:string;
+    content:string;
+    createdAt:Date;
+    author?:string;
+    category?:string;
+    updatedAt?:Date;
+    likesCount:number;
+    authorId?:number;
+    isPublished:boolean;
+    views: number;
+  }
+Show more
+Here's how you can generate the HTML for the PostCreateComponent and PostEditComponent based on the provided Post interface:
+
+PostCreateComponent HTML (post-create.component.html)
+html
+<h2>Create Post</h2>
+<form (ngSubmit)="onSubmit()" #postForm="ngForm">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" name="title" [(ngModel)]="post.title" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" [(ngModel)]="post.content" class="form-control" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input id="author" name="author" [(ngModel)]="post.author" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input id="category" name="category" [(ngModel)]="post.category" class="form-control">
+  </div>
+  <div class="form-check">
+    <input id="isPublished" name="isPublished" type="checkbox" [(ngModel)]="post.isPublished" class="form-check-input">
+    <label class="form-check-label" for="isPublished">Published</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!postForm.form.valid">Create</button>
+</form>
+
+PostEditComponent HTML (post-edit.component.html)
+html
+<h2>Edit Post</h2>
+<form (ngSubmit)="onSubmit()" #postForm="ngForm">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" name="title" [(ngModel)]="post.title" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" [(ngModel)]="post.content" class="form-control" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input id="author" name="author" [(ngModel)]="post.author" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input id="category" name="category" [(ngModel)]="post.category" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="createdAt">Created At:</label>
+    <input id="createdAt" name="createdAt" type="datetime-local" [(ngModel)]="post.createdAt" class="form-control" readonly>
+  </div>
+  <div class="form-group">
+    <label for="updatedAt">Updated At:</label>
+    <input id="updatedAt" name="updatedAt" type="datetime-local" [(ngModel)]="post.updatedAt" class="form-control">
+  </div>
+  <div class="form-check">
+    <input id="isPublished" name="isPublished" type="checkbox" [(ngModel)]="post.isPublished" class="form-check-input">
+    <label class="form-check-label" for="isPublished">Published</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!postForm.form.valid">Save Changes</button>
+</form>
+
+Notes:
+Form Validation: The [disabled]="!postForm.form.valid" attribute disables the submit button until the form is valid, ensuring required fields are filled.
+Readonly Fields: In the edit form, createdAt is set to readonly since typically, you wouldn't want to change when the post was initially created.
+Optional Fields: Fields like author, category, and updatedAt are optional in the model, so they don't have the required attribute. 
+DateTime Inputs: For createdAt and updatedAt, I've used type="datetime-local" for a user-friendly datetime input. This might not be supported in all browsers, so you might need to handle this differently for full compatibility.
+LikesCount and Views: These are not included in the form as they are typically managed by backend logic rather than user input.
+
+Ensure you have the FormsModule imported in your components for ngModel to work, or use ReactiveFormsModule for a different form handling approach. Also, remember to adjust the TypeScript part of these components to handle the form submission (onSubmit() method), initializing the post object, and managing any additional logic or API calls.

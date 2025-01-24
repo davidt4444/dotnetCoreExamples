@@ -1,0 +1,32 @@
+<h2>Edit Post</h2>
+<form (ngSubmit)="onSubmit()" #postForm="ngForm">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <input id="title" name="title" [(ngModel)]="post.title" class="form-control" required>
+  </div>
+  <div class="form-group">
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" [(ngModel)]="post.content" class="form-control" required></textarea>
+  </div>
+  <div class="form-group">
+    <label for="author">Author:</label>
+    <input id="author" name="author" [(ngModel)]="post.author" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <input id="category" name="category" [(ngModel)]="post.category" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="createdAt">Created At:</label>
+    <input id="createdAt" name="createdAt" type="datetime-local" [(ngModel)]="post.createdAt" class="form-control" readonly>
+  </div>
+  <div class="form-group">
+    <label for="updatedAt">Updated At:</label>
+    <input id="updatedAt" name="updatedAt" type="datetime-local" [(ngModel)]="post.updatedAt" class="form-control">
+  </div>
+  <div class="form-check">
+    <input id="isPublished" name="isPublished" type="checkbox" [(ngModel)]="post.isPublished" class="form-check-input">
+    <label class="form-check-label" for="isPublished">Published</label>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!postForm.form.valid">Save Changes</button>
+</form>
