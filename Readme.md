@@ -121,13 +121,16 @@ and to the providers
     provideHttpClient(), 
 on main.ts
 So, the app.config and app.routes are effectively useless. 
+https://x.com/i/grok/share/fhMQW0jpr1zlHjODG2ELPkPYD
 
 To get the web api endpoint to work for this you will need to add cors middleware policy as a service, and call use cors on the app before app.run(); 
+Here is the help reference: https://learn.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-9.0
 
 Grok: generate post create and edit component html for this model
+Update the components with the UI fields needed to have data to give to the service.
+https://x.com/i/grok/share/ss4tMU3Y5mzQ2ZSlkQxrX2jLm
 
 Start the web api service
 ng serve
-https://x.com/i/grok/share/fhMQW0jpr1zlHjODG2ELPkPYD
 
 https://x.com/i/grok?conversation=1877845767018430752
