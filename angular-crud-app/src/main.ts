@@ -1,18 +1,13 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
-import { provideRouter, Routes, RouterLink } from '@angular/router';
-import { PostListComponent } from './app/post-list/post-list.component';
-import { PostCreateComponent } from './app/post-create/post-create.component';
-import { PostEditComponent } from './app/post-edit/post-edit.component';
 import { PostService } from './app/post.service';
 import { HttpClient } from '@angular/common/http';
 import { provideHttpClient } from '@angular/common/http';
 
-const routes: Routes = [
-  { path: '', component: PostListComponent },
-  { path: 'create', component: PostCreateComponent },
-  { path: 'edit/:id', component: PostEditComponent }
-];
+import { routes } from './app/app.routes';
+import { provideRouter, RouterLink } from '@angular/router';
+
+
 
 bootstrapApplication(AppComponent, {
   providers: [

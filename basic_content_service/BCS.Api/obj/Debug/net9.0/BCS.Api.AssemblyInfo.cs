@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BCS.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d163651aff1f05f0546db200a74085c9a2a2ae75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+23fa01b922f6c8468cb5c9e2b2712941b7ce5238")]
 [assembly: System.Reflection.AssemblyProductAttribute("BCS.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BCS.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

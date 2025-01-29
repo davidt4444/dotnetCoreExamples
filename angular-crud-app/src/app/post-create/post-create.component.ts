@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PostService } from '../post.service';
-import { RouterLink, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Post } from '../models/post.model';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-post-create',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './post-create.component.html',
   styleUrls: ['./post-create.component.css']
 })
