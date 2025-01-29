@@ -1,4 +1,4 @@
-import { provideRouter, Routes, RouterLink } from '@angular/router';
+import { Routes } from '@angular/router';
 import { PostListComponent } from './post-list/post-list.component';
 import { PostAdminComponent } from './post-admin/post-admin.component';
 import { PostCreateComponent } from './post-create/post-create.component';
@@ -11,6 +11,3 @@ export const routes: Routes = [
   { path: 'edit/:id', component: PostEditComponent }
 ];
 
-// import { Routes } from '@angular/router';
-
-// export const routes: Routes = [];
