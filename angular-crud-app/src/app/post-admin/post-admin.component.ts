@@ -31,14 +31,3 @@ export class PostAdminComponent implements OnInit {
   }
 }
 
-// import { Component } from '@angular/core';
-
-// @Component({
-//   selector: 'app-post-admin',
-//   imports: [],
-//   templateUrl: './post-admin.component.html',
-//   styleUrl: './post-admin.component.css'
-// })
-// export class PostAdminComponent {
-
-// }
