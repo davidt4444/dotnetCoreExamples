@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 export class PostCreateComponent {
   post: Post = {
     id: 0,
+    uniqueId: '',
     title: '',
     content: '',
     createdAt: new Date(),
@@ -26,6 +27,7 @@ export class PostCreateComponent {
   constructor(private postService: PostService, private router: Router) { }
 
   onSubmit() {
+    console.log(this.post);
     this.postService.createPost(this.post).subscribe(() => {
       this.router.navigate(['/']);
     });

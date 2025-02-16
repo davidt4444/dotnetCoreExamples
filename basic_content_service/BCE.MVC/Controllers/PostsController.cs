@@ -54,7 +54,7 @@ namespace BCE.MVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Post post)
         {
-            if (id != post.Id)
+            if (id != post.id)
             {
                 return NotFound();
             }

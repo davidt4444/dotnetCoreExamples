@@ -90,7 +90,7 @@ namespace BCS.Api.Controllers
         public async Task<ActionResult<Post>> PostPost([FromBody] Post newPost)
         {
             await _postService.AddPostAsync(newPost);
-            return CreatedAtAction(nameof(GetPost), new { id = newPost.Id }, newPost);
+            return CreatedAtAction(nameof(GetPost), new { id = newPost.id }, newPost);
         }
 
         /// <summary>
@@ -105,7 +105,7 @@ namespace BCS.Api.Controllers
         [SwaggerOperation(Summary = "Update an existing post", Description = "Updates a post with new data")]
         public async Task<IActionResult> PutPost(int id, [FromBody] Post postToUpdate)
         {
-            if (id != postToUpdate.Id)
+            if (id != postToUpdate.id)
             {
                 return BadRequest();
             }

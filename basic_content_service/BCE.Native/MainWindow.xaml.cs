@@ -76,7 +76,7 @@ namespace BCE.Native
             {
                 if (MessageBox.Show("Are you sure you want to delete this post?", "Confirm Delete", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
                 {
-                    await _postService.DeletePostAsync(selectedPost.Id);
+                    await _postService.DeletePostAsync(selectedPost.id);
                     RefreshPosts();
                 }
             }

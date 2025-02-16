@@ -18,8 +18,8 @@ namespace BCE.Native
             if (post != null)
             {
                 _post = post;
-                txtTitle.Text = post.Title;
-                txtContent.Text = post.Content;
+                txtTitle.Text = post.title;
+                txtContent.Text = post.content;
             }
         }
 
@@ -40,18 +40,18 @@ namespace BCE.Native
                 // Create new post
                 var newPost = new Post
                 {
-                    Title = txtTitle.Text,
-                    Content = txtContent.Text,
-                    CreatedAt = DateTime.UtcNow
+                    title = txtTitle.Text,
+                    content = txtContent.Text,
+                    createdAt = DateTime.UtcNow
                 };
                 await _postService.AddPostAsync(newPost);
             }
             else
             {
                 // Update existing post
-                _post.Title = txtTitle.Text;
-                _post.Content = txtContent.Text;
-                _post.UpdatedAt = DateTime.UtcNow;
+                _post.title = txtTitle.Text;
+                _post.content = txtContent.Text;
+                _post.updatedAt = DateTime.UtcNow;
                 await _postService.UpdatePostAsync(_post);
             }
             MessageBox.Show("Post saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);

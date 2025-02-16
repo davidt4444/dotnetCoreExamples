@@ -36,7 +36,7 @@ namespace BCS.Api.Services
         public async Task<IEnumerable<Post>> GetAllPostsAsync()
         {
             return await _context.Posts
-                .OrderByDescending(p => p.CreatedAt)
+                .OrderByDescending(p => p.createdAt)
                 .ToListAsync();
         }
 
@@ -52,7 +52,8 @@ namespace BCS.Api.Services
                 throw new ArgumentNullException(nameof(post));
             }
 
-            post.CreatedAt = DateTime.UtcNow;
+            post.uniqueId = Guid.NewGuid().ToString();
+            post.createdAt = DateTime.UtcNow;
             _context.Posts.Add(post);
             await _context.SaveChangesAsync();
         }
@@ -64,7 +65,7 @@ namespace BCS.Api.Services
                 throw new ArgumentNullException(nameof(post));
             }
 
-            post.UpdatedAt = DateTime.UtcNow;
+            post.updatedAt = DateTime.UtcNow;
             _context.Entry(post).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }

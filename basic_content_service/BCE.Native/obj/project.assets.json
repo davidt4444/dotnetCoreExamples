@@ -2798,11 +2798,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/netCoreExamples/basic_content_service/BCE.Native/BCE.Native.csproj",
+      "projectUniqueName": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/dotnetCoreExamples/basic_content_service/BCE.Native/BCE.Native.csproj",
       "projectName": "BCE.Native",
-      "projectPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/netCoreExamples/basic_content_service/BCE.Native/BCE.Native.csproj",
+      "projectPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/dotnetCoreExamples/basic_content_service/BCE.Native/BCE.Native.csproj",
       "packagesPath": "/Users/davidthigpen/.nuget/packages/",
-      "outputPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/netCoreExamples/basic_content_service/BCE.Native/obj/",
+      "outputPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/dotnetCoreExamples/basic_content_service/BCE.Native/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/davidthigpen/.nuget/NuGet/NuGet.Config"
@@ -2817,8 +2817,8 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/netCoreExamples/basic_content_service/BCS.Api/BCS.Api.csproj": {
-              "projectPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/netCoreExamples/basic_content_service/BCS.Api/BCS.Api.csproj"
+            "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/dotnetCoreExamples/basic_content_service/BCS.Api/BCS.Api.csproj": {
+              "projectPath": "/Users/davidthigpen/Library/Mobile Documents/com~apple~CloudDocs/Documents/resume/github/dotnetCoreExamples/basic_content_service/BCS.Api/BCS.Api.csproj"
             }
           }
         }

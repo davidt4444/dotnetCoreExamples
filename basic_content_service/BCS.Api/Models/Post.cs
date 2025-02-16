@@ -21,43 +21,47 @@ namespace BCS.Api.Models
     public class Post
     {
         [Key]
-        public int Id { get; set; }
+        public int id { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [StringLength(36)]
+        public string uniqueId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         [StringLength(200, MinimumLength = 5)]
-        public string Title { get; set; }
+        public string title { get; set; }
 
         [Required]
         [StringLength(10000)] // Adjust the length according to your needs
-        public string Content { get; set; }
+        public string content { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime createdAt { get; set; } = DateTime.UtcNow;
 
         [StringLength(200)]
-        public string Author { get; set; }
+        public string author { get; set; }
 
         // If posts can have categories
         [StringLength(100)]
-        public string Category { get; set; }
+        public string category { get; set; }
 
         // If you want to track when a post was last updated
-        public DateTime? UpdatedAt { get; set; }
+        public DateTime? updatedAt { get; set; }
 
         // If you need to track likes (this could be a separate table for better scalability)
-        public int LikesCount { get; set; } = 0;
+        public int likesCount { get; set; } = 0;
 
         // Navigation property if you have a relationship with a User or Author model
         [ForeignKey("Author")]
-        public int? AuthorId { get; set; }
+        public int? authorId { get; set; }
         //public virtual User Author { get; set; } // uncomment if you have a User model
 
         // If posts can have comments
         //public virtual ICollection<Comment> Comments { get; set; }
 
         // If you want to track whether the post is published or not
-        public bool IsPublished { get; set; } = true;
+        public bool isPublished { get; set; } = true;
 
         // If you want to track post views
-        public int Views { get; set; } = 0;
+        public int views { get; set; } = 0;
     }
 }

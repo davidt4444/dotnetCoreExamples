@@ -1,5 +1,6 @@
 export interface Post {
     id: number;
+    uniqueId:string;
     title:string;
     content:string;
     createdAt:Date;
@@ -13,6 +14,7 @@ export interface Post {
   }
   // {
   //   id: number;
+  //   uniqueId: string;
   //   title: string;
   //   content: string;
   //   createdAt: Date;

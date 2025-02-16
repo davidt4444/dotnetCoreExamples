@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 export class PostEditComponent implements OnInit {
   post: Post = {
     id: 0,
+    uniqueId: '',
     title: '',
     content: '',
     createdAt: new Date(),

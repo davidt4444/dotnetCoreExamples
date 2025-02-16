@@ -51,10 +51,10 @@ namespace BCS.Api.Data
 
             modelBuilder.Entity<Post>(entity =>
             {
-                entity.HasKey(e => e.Id);
-                entity.Property(e => e.Title).IsRequired().HasMaxLength(200);
-                entity.Property(e => e.Content).IsRequired();
-                entity.Property(e => e.CreatedAt).HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
+                entity.HasKey(e => e.id);
+                entity.Property(e => e.title).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.content).IsRequired();
+                entity.Property(e => e.createdAt).HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
                 // Additional configurations for Post if necessary
             });
 
