@@ -28,7 +28,8 @@ namespace BCE.Native
 
         private void ConfigureServices(IServiceCollection services)
         {
-            StreamReader sr = new StreamReader("../../../aws-resources/localhost-mac-dotnet.txt");
+            // project root iis ../../../ vs project bin which is ../../../../../../
+            StreamReader sr = new StreamReader("../../../../../../aws-resources/localhost-mac-dotnet.txt");
             services.AddDbContext<YourDbContext>(options =>
                 // options.UseMySql("YourConnectionString", sr.ReadToEnd()));
                 options.UseMySQL(sr.ReadToEnd()));

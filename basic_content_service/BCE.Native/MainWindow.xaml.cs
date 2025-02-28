@@ -39,9 +39,9 @@ namespace BCE.Native
             RefreshPosts();
         }
 
-        private async void RefreshPosts()
+        private void RefreshPosts()
         {
-            var posts = await _postService.GetAllPostsAsync();
+            var posts = _postService.GetAllPosts();
             _posts.Clear();
             foreach (var post in posts)
             {

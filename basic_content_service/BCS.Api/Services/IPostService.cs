@@ -12,6 +12,7 @@ namespace BCS.Api.Services
         /// </summary>
         /// <returns>A task that represents the asynchronous operation. The task result contains a list of posts.</returns>
         Task<IEnumerable<Post>> GetAllPostsAsync();
+        IEnumerable<Post> GetAllPosts();
 
         /// <summary>
         /// Retrieves a specific post by its ID.

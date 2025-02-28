@@ -40,6 +40,13 @@ namespace BCS.Api.Services
                 .ToListAsync();
         }
 
+        public IEnumerable<Post> GetAllPosts()
+        {
+            return _context.Posts
+                .OrderByDescending(p => p.createdAt)
+                .ToList();
+        }
+
         public async Task<Post> GetPostByIdAsync(int id)
         {
             return await _context.Posts.FindAsync(id);
