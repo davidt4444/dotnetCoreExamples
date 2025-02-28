@@ -1,3 +1,7 @@
+The global settings for vscode can be found at C:\Users\[User]\AppData\Roaming\Code\User\settings.json
+To install things like IIS, etc. 
+-> Turn windows features on or off
+
 
 If not installed, download and install dotnet core
 https://learn.microsoft.com/en-us/dotnet/core/install/macos
