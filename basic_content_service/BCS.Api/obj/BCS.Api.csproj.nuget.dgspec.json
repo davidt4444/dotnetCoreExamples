@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {}
+    "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {
+    "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj",
+        "projectUniqueName": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj",
         "projectName": "BCS.Api",
-        "projectPath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj",
+        "projectPath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj",
         "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\obj\\",
+        "outputPath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H5nZbz3EppU=",
+  "dgSpecHash": "tRSDiyRfbyw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
+  "projectFilePath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\david\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\david\\.nuget\\packages\\google.protobuf\\3.26.1\\google.protobuf.3.26.1.nupkg.sha512",

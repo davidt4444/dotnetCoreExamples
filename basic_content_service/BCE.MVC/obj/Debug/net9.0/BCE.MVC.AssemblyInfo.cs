@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BCE.MVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e4d7b1befab8fa51617cd9fcec2512e4d0aaca37")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f4244ee85c26236f6a2ab123fe3ccd7934aa232c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BCE.MVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BCE.MVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

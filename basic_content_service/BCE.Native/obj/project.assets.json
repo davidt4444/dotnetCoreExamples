@@ -2799,11 +2799,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
+      "projectUniqueName": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
       "projectName": "BCE.Native",
-      "projectPath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
+      "projectPath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\BCE.Native.csproj",
       "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\obj\\",
+      "outputPath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCE.Native\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2824,8 +2824,8 @@
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
           "projectReferences": {
-            "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {
-              "projectPath": "C:\\Users\\david\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj"
+            "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj": {
+              "projectPath": "C:\\Users\\david\\Documents\\github\\dotnetCoreExamples\\basic_content_service\\BCS.Api\\BCS.Api.csproj"
             }
           }
         }
@@ -2870,7 +2870,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

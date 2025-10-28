@@ -9,57 +9,57 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BCE.MVC
 build_property.RootNamespace = BCE.MVC
-build_property.ProjectDir = C:\Users\david\github\dotnetCoreExamples\basic_content_service\BCE.MVC\
+build_property.ProjectDir = C:\Users\david\Documents\github\dotnetCoreExamples\basic_content_service\BCE.MVC\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\david\github\dotnetCoreExamples\basic_content_service\BCE.MVC
+build_property.MSBuildProjectDirectory = C:\Users\david\Documents\github\dotnetCoreExamples\basic_content_service\BCE.MVC
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Home/Index.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Home/Privacy.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Create.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Delete.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Edit.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Index.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Posts/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9zdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/Error.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/_ViewImports.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/_ViewStart.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/david/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/david/Documents/github/dotnetCoreExamples/basic_content_service/BCE.MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-5tq5n4q041
